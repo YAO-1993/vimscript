@@ -1,0 +1,23 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+DBUS_BINDINGS_API_COUNT	dbus/dbus-python.h	48;"	d
+DBUS_PYTHON_H	dbus/dbus-python.h	30;"	d
+DBusPyConnection_BorrowDBusConnection	dbus/dbus-python.h	/^extern DBusConnection *DBusPyConnection_BorrowDBusConnection(PyObject *);$/;"	p	signature:(PyObject *)
+DBusPyConnection_BorrowDBusConnection	dbus/dbus-python.h	63;"	d
+DBusPyNativeMainLoop_New4	dbus/dbus-python.h	/^extern PyObject *DBusPyNativeMainLoop_New4(_dbus_py_conn_setup_func,$/;"	p	signature:(_dbus_py_conn_setup_func, _dbus_py_srv_setup_func, _dbus_py_free_func, void *)
+DBusPyNativeMainLoop_New4	dbus/dbus-python.h	65;"	d
+PY3	dbus/dbus-python.h	36;"	d
+PYDBUS_CAPSULE_NAME	dbus/dbus-python.h	37;"	d
+_dbus_bindings_module	dbus/dbus-python.h	/^static PyObject *_dbus_bindings_module = NULL;$/;"	v
+_dbus_py_conn_setup_func	dbus/dbus-python.h	/^typedef dbus_bool_t (*_dbus_py_conn_setup_func)(DBusConnection *, void *);$/;"	t
+_dbus_py_free_func	dbus/dbus-python.h	/^typedef void (*_dbus_py_free_func)(void *);$/;"	t
+_dbus_py_func_ptr	dbus/dbus-python.h	/^typedef void (*_dbus_py_func_ptr)(void);$/;"	t
+_dbus_py_srv_setup_func	dbus/dbus-python.h	/^typedef dbus_bool_t (*_dbus_py_srv_setup_func)(DBusServer *, void *);$/;"	t
+c_api	dbus/dbus-python.h	/^    PyObject *c_api;$/;"	l
+count	dbus/dbus-python.h	/^    int count;$/;"	l
+dbus_bindings_API	dbus/dbus-python.h	/^static _dbus_py_func_ptr *dbus_bindings_API;$/;"	v
+import_dbus_bindings	dbus/dbus-python.h	/^import_dbus_bindings(const char *this_module_name)$/;"	f	signature:(const char *this_module_name)
