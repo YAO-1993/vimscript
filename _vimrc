@@ -126,6 +126,10 @@ function Configure4python()
     set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
     nmap <F5> :!python %
     nmap <F6> :make
+"pydiction 1.2 python auto complete
+    let g:pydiction_location = '~/.vim/tools/pydiction/complete-dict'
+    "defalut g:pydiction_menu_height == 15
+    "let g:pydiction_menu_height = 20
     "copen "如果是py文件，则同时打开编译信息窗口
 endfunction
 

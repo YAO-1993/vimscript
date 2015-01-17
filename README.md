@@ -31,36 +31,36 @@ vimrc
     </li>
     <li><a href="https://github.com/fs111/pydoc.vim">
         pydoc:显示python模块或者类的文档(github 主页)
-        </a></br>
-        :Pydoc <keyword>      例如   :Pydoc int     作用是显示python模块或者类的文档。</br>
-        :PydocSearch <keyword>  等价于 :Pydoc -k <keyword>   作用是搜索keyword的相关文档。</br>
-        <leader>pw   当光标在一个关键字上，可以按下，就可以显示该关键字的相关文档。</br>
+        </a><br/>
+        :Pydoc <keyword>      例如   :Pydoc int     作用是显示python模块或者类的文档。<br/>
+        :PydocSearch <keyword>  等价于 :Pydoc -k <keyword>   作用是搜索keyword的相关文档。<br/>
+        <leader>pw   当光标在一个关键字上，可以按下，就可以显示该关键字的相关文档。<br/>
     </li>
     <li><a href="https://github.com/kevinw/pyflakes-vim">
         pyflakes-vim:python代码语法检查。命令 :cc  定位语法错误(推荐使用syntastic)
-        </a></br>
+        </a><br/>
     </li>
-    <li><a href="https://github.com/Crapworks/python_fn.vim"> python_fn github主页
-        <a href="http://blog.gdsyzx.edu.cn/sense/?p=1779" >相关介绍</a>
-        Shortcuts:</br>
-        ]t — Jump to beginning of block</br>
-        ]e — Jump to end of block</br>
-        ]v — Select (Visual Line Mode) block</br>
-        ]< — Shift block to left</br>
-        ]> — Shift block to right</br>
-        ]# — Comment selection</br>
-        ]u — Uncomment selection</br>
-        ]c — Select current/previous class</br>
-        ]d — Select current/previous function</br>
-        ]<up> — Jump to previous line with the same/lower indentation</br>
-        ]<down> — Jump to next line with the same/lower indentation</br>
+    <li><a href="https://github.com/Crapworks/python_fn.vim"> python_fn github主页<br/>
+
+        <a href="http://blog.gdsyzx.edu.cn/sense/?p=1779" >相关介绍</a><br/>
+        Shortcuts:<br/>
+        ]t — Jump to beginning of block<br/>
+        ]e — Jump to end of block<br/>
+        ]v — Select (Visual Line Mode) block<br/>
+        ]< — Shift block to left<br/>
+        ]> — Shift block to right<br/>
+        ]# — Comment selection<br/>
+        ]u — Uncomment selection<br/>
+        ]c — Select current/previous class<br/>
+        ]d — Select current/previous function<br/>
+        ]<up> — Jump to previous line with the same/lower indentation<br/>
+        ]<down> — Jump to next line with the same/lower indentation<br/>
     </li>
     <li><a href="https://github.com/vim-scripts/Pydiction">
-        pytdi</a>
-        <a>
-        pydiction 通过tab键补全python代码</a></br>
+        pydiction</a> <br/>
+        <a>pydiction 通过tab键补全python代码</a><br/>
         在.vimrc中设置“let g:pydiction_location = '/path/to/complete-dict'”
-            使用方法：
+            使用方法：<br/>
             <Tab>键：在插入中输入部分Pyton关键字，模块名称，属性或者方法名时，可以按<Tab>来自动完成
             <shift>+<Tab>键：撤销用<Tab>键产生的自动输入。
     </li>
