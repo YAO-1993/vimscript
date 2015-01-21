@@ -427,12 +427,11 @@ set completeopt=menuone,menu,longest
 
 "python code complete
 
-"let g:pydiction_location = $VIMRUNTIME.'\ftplugin\pydiction\complete-dict'
-if s:SystemString == "windows"
-    let g:pydiction_location = $VIMRUNTIME.'\plugin\complete-dict'
-else
-    let g:pydiction_location = $VIMRUNTIME.'/plugin/complete-dict'
-endif
+"if s:SystemString == "windows"
+"    let g:pydiction_location = $VIMRUNTIME.'\plugin\complete-dict'
+"else
+"    let g:pydiction_location = $VIMRUNTIME.'/plugin/complete-dict'
+"endif
 "let g:pydiction_menu_height = 20 ”设置弹出菜单的高度，默认是15
 
 ""config the cscope
