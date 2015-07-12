@@ -8,7 +8,7 @@ fi
 git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
 
 #copy complete-dict
-cp -rf tool ~/.vim
+cp -rf tools ~/.vim
 
 #copy vimrc
 cp -rf _vimrc ~/.vimrc

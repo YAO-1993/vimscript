@@ -1,6 +1,12 @@
 vimrc
 =====
 此vimrc主要是为了保存对Vim 的配置,不断学习，不断更新
+<pre>
+安装步骤：
+./setup
+然后打开vim，执行BundleInstall命令，在命令模式下输入:BundleInstall
+<pre>
+
 <h3>相关插件</h3>
 <ol>
     <li>
