@@ -5,7 +5,7 @@ vimrc
 安装步骤：
 ./setup
 然后打开vim，执行BundleInstall命令，在命令模式下输入:BundleInstall
-<pre>
+</pre>
 
 <h3>相关插件</h3>
 <ol>
