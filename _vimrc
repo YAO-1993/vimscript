@@ -131,16 +131,25 @@ function Configure4python()
     "defalut g:pydiction_menu_height == 15
     "let g:pydiction_menu_height = 20
     "copen "如果是py文件，则同时打开编译信息窗口
+    set statusline+=%#warningmsg#
+    set statusline+=%{SyntasticStatuslineFlag()}
+    set statusline+=%*
+
+    let g:syntastic_always_populate_loc_list = 1
+    let g:syntastic_auto_loc_list = 1
+    let g:syntastic_check_on_open = 1
+    let g:syntastic_check_on_wq = 0
 endfunction
 
 func InitPythonConfig()
 		call Configure4python()
-		call setline((line('$')),"\###File Name:".expand("%"))
+		call setline((line('$')),"\#coding=utf-8")
+		call append((line('$')),"\###File Name:".expand("%"))
 		call append(line("$"), "\###Author:haicg")
 		call append(line("$"), "\###Mail:lihaicg@126.com")
 		call append(line("$"), "\###Created Time: ".strftime("%c"))
 		call append(line("$"),"\###File Name : ".expand("%"))
-		call append(line("$"),"\#!/usr/bin/python")
+		call append(line("$"),"\#!/usr/bin/env python")
 		call append(line("$"), "")
 endfunc
 
@@ -506,6 +515,7 @@ Bundle 'gmarik/vundle'
 "My repos on github
 Bundle 'haicg/vimscript'
 " original repos on github
+Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-fugitive'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'Yggdroot/indentLine'
