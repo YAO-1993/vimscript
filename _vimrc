@@ -256,7 +256,7 @@ set noswapfile
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use spaces instead of tabs
-set expandtab
+"set expandtab
 
 " Be smart when using tabs ;)
 set smarttab
@@ -329,8 +329,8 @@ vnoremap <silent> <leader>r :call VisualSelection('replace')<CR>
 " To go to the previous search results do:
 "   <leader>p
 "
-map <leader>cc :botright cope<cr>
-map <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
+"map <leader>cc :botright cope<cr>
+"map <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
 map <leader>n :cn<cr>
 map <leader>p :cp<cr>
 
@@ -362,7 +362,7 @@ nmap <leader>tgc :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q *<CR>
 			\:set tags+=tags
 nmap <leader>tg :!ctags -R *<cr>
 set tags+=tags;
-set autochdir
+"set autochdir
 
 let Tlist_Show_One_File =1
 let Tlist_Exit_OnlyWindow=1
@@ -420,6 +420,28 @@ function! SetCompilation()
 		set makeprg=g++\ %\ -o\ %<
 	endif
 endfunction
+"""Latex suite
+" REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
+filetype plugin on
+
+" IMPORTANT: win32 users will need to have 'shellslash' set so that latex
+" can be called correctly.
+set shellslash
+
+" IMPORTANT: grep will sometimes skip displaying the file name if you
+" search in a singe file. This will confuse Latex-Suite. Set your grep
+" program to always generate a file-name.
+set grepprg=grep\ -nH\ $*
+
+" OPTIONAL: This enables automatic indentation as you type.
+filetype indent on
+
+" OPTIONAL: Starting with Vim 7, the filetype of empty .tex files defaults to
+" 'plaintex' instead of 'tex', which results in vim-latex not being loaded.
+" The following changes the default filetype back to 'tex':
+let g:tex_flavor='latex'
+
+
 
 "->auto complete
 " OmniCppComplete
@@ -476,6 +498,14 @@ else
 		"
 	"nmap <leader>cc :!find . -regex '.*\.c\|.*\.cpp\|.*\.h\|.*\.hpp\|.*\.py' > cscope.files
 	"nmap <leader>oo :! cscope -b -i cscope.files -f cscope.out
+    nmap <leader>cs :cs find s <C-R>=expand("<cword>")<CR><CR>
+    nmap <leader>cg :cs find g <C-R>=expand("<cword>")<CR><CR>
+    nmap <leader>cc :cs find c <C-R>=expand("<cword>")<CR><CR>
+    nmap <leader>ct :cs find t <C-R>=expand("<cword>")<CR><CR>
+    nmap <leader>ce :cs find e <C-R>=expand("<cword>")<CR><CR>
+    nmap <leader>cf :cs find f <C-R>=expand("<cfile>")<CR><CR>
+    nmap <leader>ci :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+    nmap <leader>cd :cs find d <C-R>=expand("<cword>")<CR><CR>
     endif
 endif
 
@@ -508,7 +538,7 @@ au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
 "filetype off "required!
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-set nowrap
+"set nowrap
 " let Vundle manage Vundle
 " required!
 Bundle 'gmarik/vundle'
